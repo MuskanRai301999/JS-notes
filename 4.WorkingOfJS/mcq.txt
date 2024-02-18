@@ -1,0 +1,223 @@
+1.Which of the following best describes an execution context?
+  The environment in which code is executed
+  An execution context refers to the environment in which a piece of code is executed.
+  It involves variables,functions and objects that are accessible at the given point in code's execution.
+
+2.When is the global execution context created in a program
+   When the program begins to execute
+
+3.What happens when multiple JS files are linked in a single HTML file?
+   A single execution context is made for all the files
+
+4.You have index1.html and index2.html files. The index1.html file contains a hyperlink to the index2.html file. Look at the code files given below and guess the output in the console when you open index1.html, and then click on the hyperlink ‘Go to Page 2’.
+
+
+index1.html
+
+<html>
+<head>
+   <title>Page 1</title>
+</head>
+<body>
+   <p>This is Page 1</p>
+   <a href="index2.html">Go to Page 2</a>
+   <script src="script1.js"></script>
+ </body>
+</html>
+index2.html
+
+<html>
+<head>
+    <title>Page 2</title>
+</head>
+<body>
+    <p>This is Page 2</p>
+    <script src="script2.js"></script>
+</body>
+</html>
+script1.js
+
+var c = "script1" ;
+console.log(c) ;
+script2.js
+
+var c = "script2" ;
+console.log(c) ;
+
+script1 script2 as c is not a global variable of the same scope.
+When index1.html is loaded,a new global execution context is created and script1.js is executed logging "script1.
+Upon clicking the hyperlink index1.html and its execution context unload and index2.html loads, creating a new
+creating a new execution context where script2 runs logging script2.
+
+5.What will the following code print on console?
+
+function multiply(a, b) {
+    return a*b;
+};
+
+console.log(multiply);
+
+f multiply(a,b){return a*b}
+multiply is a variable that stores the address of a function which takes 2 input and return an output .When we have to execute the function we need to make a function call .
+
+6.When does hoisting occur in JavaScript?
+  During the compilation phase before code execution
+
+7. x=5;
+    console.log(x);
+    var x=20; ans=5
+    Due to hoisting the variable x will be present in the execution context as undefined.It will be assigned a value of 5 at the execution first line and hence 5 gets printed
+
+8.Which is the recommended practice to avoid confusion of variables having value of undefined due to hoisting?
+  Declare variables and functions at the top of their scope
+
+9.Which component of the JavaScript runtime environment is responsible for memory management and garbage collection to reclaim memory occupied by objects that are no longer in use.?
+   JavaScript engine 
+
+10.What is the memory heap in the JavaScript runtime environment?
+   It is the memory space allocated for storing objects,functions,arrays and closures during runtime.
+
+11.Which of the following statements is true regarding the use of strict mode in JavaScr
+   Strict mode enforces stricter rules for variable scoping and prevents use of undeclared variables.
+
+12.function foo(){
+    'use strict';
+    x=10;
+}
+foo();
+The code will throw a reference error : x is not defined
+in strict mode variables must be explicitly declared.
+
+13.What happens when you redeclare a var variable with let?
+   var x=10;
+   let x=20;
+   console.log(x);
+   A suntax error will be thrown
+   Redeclaration of variables is only possible wit the var keyword.
+   If we are declaring let with var or var with let it will throw a syntax error
+   Identifier x is already declared.
+
+14.function outer(){
+    let x=10;
+    if(true){
+        let y=20;
+        var z=30;
+        console.log(x+y+z);
+    }
+    console.log(x+y+z);
+}
+outer();
+ans=60, ReferenceError:y is not defined
+
+15.What is the purpose of the call stack in JS?
+    It racks the order of execution context
+
+16.Which approach is followed by Call Stack?
+   LIFO(Last in first out)
+
+17.What will be the state of call stack before returning any value if the function factorial is called recursively in JavaScript?
+   function factorial(n){
+    if(n === 0){
+        return 1;
+    }
+    return n* factorial(n-1);
+   }
+   console.log(factorial(5));
+   It creates multiple execution contexts on top of each other in the call stack.
+   Call stack-
+   factorial
+   factorial
+   factorial
+   Global
+
+18.For the given function, what will be the ordering of the function in the call stack?
+    function foo(){
+        console.log('Hello from foo');
+    }
+    function bar(){
+        foo()
+        console.log('Hello from bar');
+    }
+    function baz(){
+        bar()
+        console.log('Hello from baz');
+    }
+    baz();
+    The ordering is represented in top-to-bottom order, as the function at the top will be executed first.
+    foo
+    bar
+    baz
+    Global
+
+    19.var x=10;
+    function foo(){
+        console.log(x);
+        var x=20;
+    }
+    foo();
+    ans-undefined
+    In the given function though the variables has been declared outside but the variable x is present in the local scopeand has not been initialized so it will give undefined as output
+
+    20.What happens if a variable with the same name is declared in both global and local scope?
+       The variable in the local scope shadows the one in the global scope.
+
+    21.Select the correct statements about the lexical environment in JavaScript.
+       1.Lexical environment is a data structure that holds variable and function decalarations and provides a scope for their access and resolution
+       2.it references the outer environment or the parent scope where the current scope is defined.
+       3.Allows for scope chaining which means variables can be accessed from the current scope and any outer scopes in the lexical hierarchy
+
+    22.How are lexical environments and execution contexts related?
+       Lexical environment are created within execution contexts
+
+    23.What happens when two functions nested within the same scope share the same variable name?
+       The functions will have seperate variables despite the same name
+
+    24.var x;
+       function foo(){
+        x=10;
+       }
+       console.log(x);
+       ans=undefined
+       In the given program, the variable x is initialized with value 10 in function foo,but the function is never called,
+       so initialization does not occur.
+    
+    25.When does the Temporal Dead Zone (TDZ) end for a variable?
+       During variable initialization
+
+    26.function cart(){
+        let items=0;
+        return{
+            addItem:function(){
+                items++;
+            },
+            getItem:function(){
+                return items;
+            }
+        };
+    }
+    const closure= cart();
+    closure.addItem();
+    closure.addItem();
+    closure.addItem();
+    console.log(closure.getItem());
+    ans=3
+    Each time the cart function is invoked,it creates a new closure instance. In the provided code, the closure constant holds
+    a reference to a specific closure instance. Invoking closure.addItem() and closure.getItem() operates on that same closure instance ,allowing access to the shared items variable.
+
+    27.Closures are only created for functions that are declared inside another function.
+       In JavaScript,closures are created when object methods, functions returned from other functions,or function accessing variables in the global scope retain access to their parent scopes , enabling persistent access to those variables.
+
+    28.How does a closure maintain access to variables even after executing the outer function?
+       The inner function keeps track of a reference to the variables used by the outer function.
+       The inner function will store the refrences to the variable of the outer function, so even after the outer function  has finished executing, it will be able to access the variable of the outer function.
+
+    29.Which of the following scenarios depicts the best use of closures in practice?
+        Creating a timer that executes a function after every period of time.
+        A timer that needs to run and execute a function constantly needs to have the details f the timer at that particular instant ,so in this case,closure would be used.
+    
+    30.What is the memory heap in the JavaScript runtime environment?
+       It is the memory space allocated for storing objects , functions, arrays and closure during runtime.
+
+    31.Which of the following statements accurately describes first-class function in programming languages? Please refer this before answering the question
+       A programming language is said to have First-class functions when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+       

@@ -1,0 +1,16 @@
+JavaScript is a Synchronous in nature
+and it is also single threaded.. which makes JavaScript code a blocking code
+that means each line is executed at a time 
+
+JavaScript can work asynchronously as well.. It means there are many web APIs available which makes JavaScript an asynchronous language.
+It makes the code non-blocking.
+APIs like setTimeout();
+setInterval();
+fetch();
+by the above methods we can hold the code in them let the code running on the background
+
+CallBack functions in asynchronous JavaScript
+The http requests are done by using
+1.XMLHTTP request
+2.Promises
+3.Async-Await

@@ -1,0 +1,60 @@
+1.Choose the option that follows the rules defined for variable nomenclature in JavaScript
+  JavaScript variables consists of letters,digits,underscores and dollar suggestions
+  It must not start with a digits
+  It is crucial to avoid using reserved keywords as variable names.
+
+2.What will be the most suitable variable name for naming a variable representing the first batch of students?
+  batchOne..most suitablenaming using camelCase
+
+3.Which feature of JavaScript allows you to declare a variable without specifying its data type?
+  JavaScript is a dynamic typing language.When you declare a variable you do not need to specify what type this variable is.JavaScript engine infers what type
+  this variable is based on the value assigned to it at the runtime.
+
+4.Suppose you are building a web application that allows users to enter their personal information.
+
+You want to store the user's name in a constant variable called userName. However, you also want to provide an option for the user to update their name in case they made a mistake.
+
+
+What happens if you try to reassign the userName variable to a new value?
+An error will be thrown because you can't reassign a constant variable.
+
+5.Which of the following statements about variable declaration and definition in JavaScript is true?
+  In javascript means creating a new variable with a given name.
+  Defining a variable means assigning a value to the variable .
+  The distinction is imp because it affects how the variable can be used in the code.
+
+6.Which of the following is the primary purpose of comments in a programming language?
+  to make the code more readable and understandable for other developers.
+
+7.let y=null;
+  let z;
+  console.log(typeof z);
+  z=y;
+  console.log(typeof z);
+  undefined and Object
+  The first statement outputs "undefined" because z is declared but not initialized and the second log statement "object
+
+8.const num = Infinity/Infinity;
+console.log(num);
+NaN
+
+9.Determine the output of the given code.
+let a=5;
+console.log(a);//prints a's value as 5
+console.log(a++);//also prints a's value as 5 and increments a's value to 6
+console.log(a++);//prints a's value as 6
+
+10.let myVar;
+   console.log(myVar === null);
+   false
+   by using '===' operator to check the equality although both undefined and null hold false values but the type of each is different from the other
+
+11.What will be the value stored in the variable num?
+   let flag;
+   flag = num ?100:200;
+   ans=200
+   The ternary operator is mostly used while assigning values where values depend on one condition . Here the flag is not initialized
+   so it will have undefined as a value and it will be equivalent to false in the ternary operator so num will have 200 as a value
+
+12.Which among the following is the correct syntax to find which number is greater or holds equality among the two numbers?
+   num1 >num2 ?   

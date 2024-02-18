@@ -1,0 +1,19 @@
+
+Why JavaScript?
+Natural proggression over HtMl and CSS in web development
+Add interactivity bechaviour to HTML and CSS
+
+Future Scope of javascript
+Front-end:client side = React,Angular,vue
+backend:Server-side:Nodejs
+Mobile application-React native
+
+What is JavaScript
+1.High-level-cross platform, memory management.
+2.Light weighted -Low uses of system resources
+3.Interpreted - Execute instructions directly without earlier compiling a program into machine language line by line
+4.JIT compiled- Compiles JavaScript to executable bytecode just as it is about to run .. at the runtime
+5.Multi-paradigm - different styles to write the code
+6.Prototype-based - Allows the creation of an object without first defining its class.
+7.Single-threaded - Executes one line of code at a time/one task at a time
+8.Dynamically-typed Language-capable of change at runtime

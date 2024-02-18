@@ -1,0 +1,28 @@
+1.What happens if multiple JavaScript files with conflicting global variable names are linked in the same HTML document?
+  It may lead to unexpected behaviour and errors due to naming conflicts
+
+2.What is a module in the context of programming?
+  A self-contained unit of code that can be reused and imported into other parts of a program.
+
+3.Advantages of using Modules
+  1.encapsulation: Modules encapsulate code and data to avoid global scope pollution
+  2.Reusability: Modules can be reused across different programs without modification
+  3.Isolation:Modules isolate functionality,preventing interactions with other parts of the program
+
+4.Which of the following best describes the scope of variables declared inside an IIFE?
+  IIFE variables have block-level scope within the IIFE.
+
+5.What happens if a named import tries to access an item that is not exported by the module?
+  The module throws an error and the program stops execution.
+
+6.Consider the following named export in a module. How can you correctly import the 'add' function into another file?
+  export const add =(a,b) =>a+b; in math.JS
+  import {add} from './math.js'
+
+7.What is the primary advantage of using a default export in JavaScript modules?
+  It allows you to export a single value, function or object as a default export.
+  When importing a default export,you can choose any name for the imported item,making the import statement shorter and more concise.
+
+8.How can you import the default exported item from a JavaScript module using a custom name for the import?
+   import greeting as myGreeting from './module.js'
+   

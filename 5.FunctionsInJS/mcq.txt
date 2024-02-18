@@ -1,0 +1,74 @@
+1.console.log(square(5));
+  var square=function(x){
+    return x*x;
+  }
+  console.log(square(5));
+  TypeError:square is not a function
+  Since we are using function expression it will be hoisted as a variable with undefined.When we try to call the square function,
+  it will give a type error as for javaScript,it is just like any other variable
+
+2.What happens if you attempt to use the arguments object inside an arrow function?
+  It will throw an error
+  An arguement object is an array-like object accessible only in regular functions,not in arrow functions.
+  Though the arguement object , a regular function can access the arguement passed in function invocation even if the function declaration does not have parameters.
+
+3.Does IIFE get hoisted?
+   no
+   Since IIFE is an expression,not a statement ,it will not be hoisted.Hoistings only apllies to variable and function declarations , not initializations or assignments.
+
+4.function main(){
+    return (function(){
+        console.log('hello user');
+    })();
+}
+const result =main();
+IIFE will be executed as soon as we call the main function
+In javascript ,IIFE can be returned from a function, but it will be executed as soon as the main function is called.We can't store theIIFE and call it later like other functions.
+
+5.What is the purpose of using an IIFE in JavaScript?
+  To encapsulate code and avoid global namespace pollution.
+
+6.var x=10;
+(function(){
+    console.log(x);
+})();
+ans=10
+Although we can't access the variables declared in IIFE , but IIFE has access to the outer scope .
+
+7.Which of the following functions is an example of a pure function?
+  A function that takes an array as input and returns a new sorted array
+
+8.Which of the following functions could potentially have side effects?
+   A function that sends a req to external APIs and returnsthe response.
+   Retriving data from outside or writing to external data is considered a side -effect becuase it involves actions that go beyond the isolated execution of the function
+
+9.which of the following are valid ways to invoke it with a callback function?
+   By arrow function
+     function expression 
+     regular function
+
+10.Which of the following statements accurately describes first-class function in programming languages?
+   All javaScript functions are cnsidered as first -class functions as they can be assigned to a variable ,passed as an arguement and returned from a function.
+   They can be assigned,passed or returned from a function.
+
+11.In a music streaming application, there is a feature to filter songs based on different criteria, such as genre, artist, and release year. How can function currying be used to implement this filtering functionality?
+    Create a nested function that returns a function to filter songs based on a specific criterion such as genre or artist.
+   Filtering the song based on different criteria with each curried function will be a better approach than creating a function that would filter for all criteria for code reusability.
+
+12.How does the map() function differ from the forEach() function in JavaScript?
+   The map() function returns a new array with tansformed elemennts while the forEach() functions returns undefined.
+
+13.What happens if the callback function provided to the map() function does not return a value?
+   The map() function returns an array with undefined values for all elements.
+
+14.What is the expected return value of the reduce function?
+   The final value of the accumulator
+   Unlike a map ,the reduce does not return any array or modify the array.It returns the final value of the accumulator after the operation of the callback funcion has been performed on the array.
+
+15.Which of the following is an appropriate use case for the reduce function?
+   The reduce functin can find the max value by comparing the accumulator with each element .It can count occurences by applying conditions and initializing the accumulator to 0 .
+   Additionally it can calculate the average by dividing the sum obtained from reduce by array length.
+   
+
+   
+  

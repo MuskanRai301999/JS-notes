@@ -1,0 +1,102 @@
+1.let sum=0;
+for(let i=0;i<=10;i+=2){
+    sum +=i;
+}
+console.log(sum);
+ans=30 2+4+6+8+10
+
+2.In which scenario you will be more likely to use a while loop
+ when the value of a variable is uncertain or unknown after each operation
+ when iterating over data with an unknown length
+
+3.If the condition is true for n iterations, then how many times will different loops run?
+   Do-while: n+1
+While & for loop: n
+
+For a do..while loop the code block will run at least once regardless of the condition and will continue to run as long as the condition remains true after each iterations
+this menas that if a condition is true for n iterations the block will run n+1 times 
+once before the condition is checked
+and then n times as long as the condition remains true
+
+4.What among the following would be the best case for default parameter?
+  Creating function for generating password with default length 8
+  Creating a function yo calculate the area of a rectangle , where the default value for the length and breadth is set to 1
+  Creating a function to create new user id with default parameters
+
+5. If the default parameter value is not specified for a parameter,the parameter will be assigned the value undefined as its default parameter
+
+6.What is the purpose of the return statement in a function in JavaScript?
+  To terminate the function
+  To specify the output of the function
+
+7.function getValue(){
+    return 1, 2, 3;
+}
+var result =getValue();
+console.log(result);
+ans=3
+When you use commas to seperate values (return 1,2,3;)
+JavaScript interprets it as the comma operator 
+which evaluates each expression but only returns the value of the last expression 
+In this case the function is effectively returning only 3.
+
+8.function calculate(length,breadth){
+    const area = length*breadth;
+}
+const area =calculate(5,5);
+console.log(area);
+In javaScript if the return statement is not defined in a function it automatically returns undefined
+
+9.What are the various data types that can be added to an array?
+   objects
+   arrays
+   primitive datatypes
+   functions
+
+10.What will be the output if we add multiple values to the unshift method ?
+   The elements will be added to the array in the front in the same order as given
+
+11.var fruits =['banana','orange'];
+    var newLength = fruits.push(['apple','mango']);
+    console.log(newLength);
+    The array passed as arguements to push will be treated as a single element and added to the fruits array.The return value of fruits.push will be the new length of the array which in this case is 3.
+     
+12. write the output of the code
+    const arr1=[1,2,34,5];
+    const arr2 =arr1.slice();
+    arr2.push(6);
+    console.log(arr1);
+    ans=[1,2,34,5]
+    If you don't pass any parameter in the slice then the default parameter will be used in place of start and end which is 0 and length of array respectively.
+
+13.var arr=['a','b','c','d'];
+   arr.splice(2,'x','y');
+   console.log(arr);
+   [a,b,y,c,d];
+   If you don't specify the deleteCount in the splice method it will automatically take the next parameter as deleteCount , since here the next parameter is a string so it will get discarded and 'y' will be inserted at index2.
+
+13.const arr =Array.from("CodingNinja");
+console.log(arr);
+['C','o','d','i',....]
+The Array.from is used to  create a new array from any iterabke data.
+When used with string it will create an Array with all the characters of the string
+
+14.When checking if your name is present in the given array of users, which of the following methods would be the most suitable to use?
+    includes()
+    In such cases Includes would be the most suitable as it returns a boolean value indicating if the element is present in the array
+
+15.Which loop is more suitable for iterating over arrays and performing operations by directly accessing each element without using indices?
+   for..of loop
+
+16.What happens when a break statement is encountered within a nested loop structure?
+    Only the innermost loop is terminated
+
+17.Alice has a list of student marks, and she wants to calculate the average of all the students. If a grade is marked "absent," which JavaScript keyword should she use in her loop to skip this iteration and move to the next one?
+   continue
+
+18.What is the purpose of the spread operator (...) in JavaScript?
+   1.To combine multiple arrays into one array
+   2.To expand an array into individual elements
+
+  19.
+

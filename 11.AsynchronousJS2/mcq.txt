@@ -1,0 +1,80 @@
+1.Which of the following best describes the Promise in JavaScript?
+  A Promise is an object that is used as placeholder for the eventual results of a deferred(and possibly asynchronous) computation.
+
+2.The Promise.race() method is used to:
+  The Promise.race() static method takes an iterable of promises as input and returns a single Promise. This returned promise settles with the eventual state of the first promise that settles.
+  const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 500, 'one');
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, 'two');
+});
+
+Promise.race([promise1, promise2]).then((value) => {
+  console.log(value);
+  // Both resolve, but promise2 is faster
+});
+// Expected output: "two"
+ans=Combine multiple promises and resolve with the first fulfilled Promise.
+
+3.How can you perform multiple fetch() requests concurrently and handle them together?
+  Use Promise.all() with an array of fetch() Promises.
+  Promise.all() takes an array of Promises as input and returns a new Promise that resolves with an array of resolved values when all the input Promisesare fulfilled.
+  This means that all the fetch() requests in the array will be executed concurrently,
+  and the Promise returned by Promise.all() will resolve with an array of the response from all the requests once they are all completed.
+
+4.Which method of the Response object is used to extract binary data like images or files?
+  blob()
+  The blob() method of the response object is used to extract binary data from the response.
+  It is particularly useful when you want to handle binary data and save it or display it directly in the browser.
+
+5.Which property of the Response object contains the HTTP status code of the network response?
+  .status
+  To get the status code of the response object we can use the status which returns the status code whereas the statusText will return the OK for a status code 200, continue for 100 , not found for 404
+
+6.You want to perform a PUT request using fetch(). Which of the following options is the correct way to set the HTTP method to PUT?
+   fetch(url,{method:'PUT});
+
+7.How can you catch unhandled errors globally in the browser, including errors from fetch()?
+  To catch unhandled errors globally in the browser,including errors from fetch(),you can use the window.addEventListener('error') event.
+  This event allows you to listen for any uncaught JavaScript errors that occur during the execution of your code,including network-related error from fetch().
+
+8.The .catch() method in a fetch() request is executed when:
+   The request fails due to network issues or server errors
+   The .catch() method is part of the Promise returned by fetch(), and it allows you to handle errors that occur during the request and response handling process.
+   It provides a way to gracefully handle and respond to unexpected situations, such as network failures or server errors,in your JavaScript code.
+
+9.The finally block in a fetch() request is useful for:
+  Ensuring cleanup tasks are performed regardless of success or error.
+  The finally block is an addition to error handling in fetch() because it allows you to maintain code consistency and ensure that essential cleanup tasks are executed,promoting better resource management and more robust application behaviour.
+
+10.Chaining fetch() requests is based on the concept of:
+   Promises
+   In JavaScript fetch() function returns a Promise.Promises are core concept for handling asynchronous
+   operation in JavaScript.they allow you to chain multiple asynchronous operations in a structured and sequential manner,making code more readable and maintainable.
+
+11.What is the recommended approach for handling errors in a fetch chain?
+   implement a single .catch() at the end of the fetch chain to handle error for all fetch request within the chain.
+
+12.What happens when you declare a function with the async keyword?
+   The function implicitly returns a Promise.
+   When u declare a function with the async keyword,it becomes an asynchronous function and it automatically returns a 
+   Promise implicitly,regardless of whether u explicitly use the return keyword or not.
+
+13.In a try and catch block, where should the code that may potentially throw an exception be placed?
+   The purpose of try block is to encompass the code where exceptions may occur and the catch block is responsible for handling 
+   those exceptions if they occur within the try block.
+
+14.What happens if an exception is thrown within a try block, but there is no corresponding catch block to handle it?
+   The program will terminate abruptly with an error message.
+   When an exception is thrown inside a try block, and there is no corresponding catch blocks to handle it,
+   the program does not know how to handle the exception,leading to an uncaught exception error, and the program terminates.
+
+15.What is the typical flow of execution when an exception is thrown inside a try block?
+   The program jumps to the corresponding catch block to handle the exception.
+  
+
+
+
+

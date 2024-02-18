@@ -1,0 +1,68 @@
+1.Whenever an instance of a class is created using the new keyword the constructor function is automatically invoked.
+
+2.Which of the following statements is true about using the "this" keyword in relation to classes, objects, and constructor functions?
+   In a class, "this" refers to the current instance of the class.
+   In an object,"this"refers to the object itself.
+
+3.What is the benefit of encapsulation in JavaScript?
+  Encapsulation enhances code modularity and organization by grouping related data and operations together ,promoting information hiding .
+  It leads to cleaner ,more maintainable code and improves the overall structure and readability of a program.
+
+4.In ES6 classes, can a subclass inherit private members (properties or methods) from the superclass?
+   No,private members are not inherited in subclass.
+
+5.Can a subclass override the static methods of the superclass?
+   no,static mehods cannot be overriden in subclass.
+
+6.In the context of encapsulation, what is the purpose of accessors (getters and setters) in JavaScript?
+  To provide controlled access and manipulation of private properties and make properties accessible from outside the object.
+
+7.Which built-in JavaScript class is used to perform pattern matching using regular expressions?
+  The RegEx class provides methods and properties to create,test and maniplate regular expressions for pattern matching in strings.
+  It allows searching ,replacing and extracting specific patterns within the text.
+
+8.Which of the following methods is used to get the current date and time using the Date object?
+  new() method is used to get the current timestamp in miliseconds which represents the current date and time.
+  Thismethod is useful for obtainnig the current date and time when working with the Date object in JavaScript.
+
+9.Which of the following is a valid JSON?
+  {"name":"John",
+   "age":30
+   }
+   The JSON will always contain the key value pair and key should always be in string format.
+
+10.Which method can be used to create a shallow copy of an array in JavaScript?
+   slice() when called with no arguement gives a shallow copy of the array ,
+   the Array.form() create a new array instead of copying.
+
+11.What is the primary advantage of using a deep copy in JavaScript?
+   It allows for modifications to the copied object without affecting the original object
+
+12.Which of the following is the correct way to remove falsy values (e.g., false, null, 0, "") from an array using the filter() method?
+   array.filter(Boolean)
+
+13.Which of the following best describes the return value of the find method if no element satisfies the given condition?
+   undefined
+   while using find if there is no matching element it returns undefined as output.
+
+14.Which method would you use if you want to find the index of the last element that satisfies the given condition?
+   lastIndexOf
+
+15.When a function is invoked as a method of an object, what does the "this" keyword refer to?
+   The object to which that method belongs to
+   when a function is invokedas a method of an object ,the this keyword refers to the object to which that method belongs.It allows the method to access and operate on the properties and methods of the object.
+
+16.What will be the output if we try to print the value of this in block scope?
+   {
+    function print(){
+        console.log(this)
+    }
+    print();
+   }
+   The global object
+
+17.When using ES6 methods and arrow functions inside objects, what is the difference in behavior regarding the 'this' keyword?
+   In ES6 methods this refers to the object on which the method is called,while in arrow functions this is lexically bound and retains the value of this from its surrounding scope.
+   ES6 methods dynamically bind this to the object while arrow functions inherit this from the surrunding context.
+   
+   

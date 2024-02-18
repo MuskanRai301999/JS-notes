@@ -1,0 +1,45 @@
+1.Which of the following options correctly describes the different platforms where JavaScript can be used?
+JavaScript can be used for frontend like React, Vue Angular
+backend development like nodejs and 
+mobile application development
+
+2.JavaScript is a scripting language and not used for defining the structure and content of web pages.
+HTML is markup language used for that purpose
+
+3.Which of the following best describes the nature of JavaScript in terms of compilation and execution for browsers?
+  JavaScript code is parsed and translated into bytecode, which is executed and optimized in JIT compiler at runtime. This allows fro fast and efficient execution of Javascript code which is both interpreted and compiled.
+
+4.What does it mean for a programming language to be interpreted?
+  An interpreter exexutes the code directly without the need for a compilation step.
+
+5.Which of the following programming styles are supported by JavaScript?
+  Procedural,Object-oriented and functional programming
+
+6.What is the purpose of the ECMA standards for JavaScript?
+  A standard for JavaScript to-
+  1.ensure compatibility across browsers
+  2.Provide guidelines for writing code
+  3.promote interoperability and standarization
+
+7.What is the difference between ECMAScript and JavaScript?
+
+Please refer to the "ECMAScript and JavaScript" notes before answering the MCQ.
+Ecmascript is a language specification and JavaScript is the language based on that specification.
+
+8.Suppose you want to ask the user for permission to send a pop-up notification, which dialog box will you use for this purpose?
+  Confirm Box
+
+9.What are some benefits of using an Integrated Development Environment (IDE)?
+  1. IDEs provides IntelliSense for code suggestions,
+  2.support multiple programming languages
+  3.offer debugging capabilties for efficient issue identification and resolution
+  4.making them valuable tools for developers.
+
+10.What is the main purpose of the console.log() method in JavaScript?
+   1. we may print our variable values , error warnings
+   2.other info to better understand the functioning of our program.  
+
+
+
+
+

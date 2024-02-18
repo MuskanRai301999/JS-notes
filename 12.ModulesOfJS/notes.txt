@@ -1,0 +1,18 @@
+If we have a lengthier code, we need to modularize our code to make it easier and understandable.
+In this scenario modules are used.
+
+1.What are modules?
+  1.Modules are self-contained units of code that encapsulate functionality.
+  2.Allows to break the code into logical pieces.
+  3.Makes the application easier to understand,test and maintain.
+
+  Currently, in JavaScript the modules are implemented using ES6 modules which was introduced in 2015.
+  Before that IIFE was used to modularize the code.
+  Common JS tools ,but they are not supported by web.. they are only used in Nodejs(backend-require,exports)
+
+2.IIFE module pattern
+  IIFE is solving only one problem i.e. the global scope is not being cluttered.
+ordering can still be a problem in iife.. in order to ensure that ordering should not be a problem we can actually use ES6 modules.
+
+ You can import multiple functions and variables in named import or export..
+ But in case of default import/export only one item can be imorted in each module

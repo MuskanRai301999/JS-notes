@@ -1,0 +1,41 @@
+1.What are APIs
+  It stands for Application Programming Interfaces.
+  It is not a part of the languages ,APIs basically are constructs,makes the life of a programmer easier
+  They are complex functionalities which are abstracted from us and they are provided to us as a syntax to achieve the complex things in a simpler way.
+
+  There are many webAPIs
+
+  Java Run time env also consists of callstack,webapis,heap
+
+  console.log APIs
+
+  Web Apis are of 2 types
+  1.Browser APIs -built in the browser you are working on
+  2.Third-party APIs - if you want to use some functionality from like say Google maps,instaed of writing whole code for navigation,you can use apis for domapi,audio api,video api
+  These browser apis are present in the window object
+
+type window inside the console and press enter
+alert,screen
+
+2.What is DOM?
+  DOM(Document Object Model) when we write an html code is a document of html
+  DOM is nothing but representation of HTML code in terms of nodes and objects,the tags and elements we create in HTML are represented as form of nodes and objects in JavaScript so that we can access and manipulate them in JavaScript.
+
+3.Accessing the nodes in the DOM
+   1.window
+   2.document
+   3.document.childNodes
+   4.document.children
+   5.document.body
+   6.document.body.childNodes //space will be considered as text as childNodes
+   7.document.body.firstChild
+   8.document.body.firstElementChild
+
+  There are selectors available in DOM which can help to access a particular node with the help of either the classname or id.
+   One of the popular selector is querySelector
+
+   //EVENTS IN JavaScript
+    1.inline EVENTS
+         <h1 class="second" onclick="alert('This is the first heading')">Document Object Model</h1>
+
+   

@@ -1,0 +1,8 @@
+Promise is nothing but an object.It's like a container which stores the future value.
+So it creates the future values to be stored in it.
+
+Promises are the foundation of asynchronous programming in modern JavaScript.
+A Promise is an object returned by an asynchronous function,which represents the current state of the operation.
+At the time the Promise is returned to the caller, the operation often isn't finished,but the promise provides methods to handle the eventual success or failure of the operation.
+
+1.Using fetch() API

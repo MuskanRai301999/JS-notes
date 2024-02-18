@@ -1,0 +1,10 @@
+1.What is JQuery?
+  1.It is a lightweight library to write code in JavaScript.
+  2.Makes writing code a lot simpler and easier
+  3.Works around multiple browsers.
+  4.Created in 2006 by John Resig.
+
+2.How to use JQuery in our projects
+  1.By downloading JQuery on our system.(uncompressed version)
+    It is a js file and it is linked using the script tag.
+  2.By using CDN(content delivery network )

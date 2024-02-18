@@ -1,0 +1,117 @@
+1.What can be used as a property name inside brackets when setting a property on an object in JavaScript?
+  Any valid Javascript expression
+  When setting a property on an object in JavaScript using bracket notation , you can use any valid JavaScript expression inside the brackets, and it will be evaluated to get the property name.
+
+2.What happens when a method is extracted from an object and called as a standalone function?
+   The value of this depends on how the extracted method is called.
+   When a method is extracted from an object and called as a standalone function , the value of this depends on how the extracted method is called.If the extracted method is called directly as a function, the value of this will be set to the
+   global object in non-strict omde,or undefined in strict-mode.However,if the extracted method is called using a specific object reference, such as object.method(),then this will refer to that object
+
+3.Object literals can cause redundancy for similar objects,like the duplicated bark function for each dog.Using constructor function or prototypes can avoid this by sharing functions across instances.
+
+4.How is the value of this determined in a factory function?
+  It is determined by the caller of factory function.
+  The value of this in a factory function is determined by the caller of the function.
+  When called as a standalone function,this refers to the global window object.When called as a method of an existing object,this refers to that object.
+
+5.Given the following constructor function:
+   function Planet(name , radius ,isHabitable){
+    this.name = name;
+    this.radius = radius;
+    this.isHabitable =isHabitable
+   }
+   Which of the following is the correct invocation syntax?
+   new Planet("Earth",6371,true)
+   The correct syntax to create a new instance of a constructor function in JavaScript is to use the new keyword followed by the function name and arguements
+   in parenthesis.Other provided options do not follow this correct syntax.
+
+6.Can we use the arrow function for the constructor function?
+  No
+  Arrow function do not have their own "this" context and they lexically bind to this to the enclosing scope.As a result,when an arrow function is used as a constructor function with the 'new' keyword,it does not create a new instance of an object.
+  instead it inherits from the enclosing scope which is typically the global object or the object that contains arrow function.
+
+7.What is a prototype in JavaScript?
+  A prototype is a reference to another object that serves as a blueprint for propertiesand methods
+
+8.function Game(name,platform){
+    this.name =name;
+    this.platform = platform;
+}
+const fifa = new Game("fifa 23" ,"Playstation");
+console.log(fifa.__proto__ === Game.prototype);
+console.log(fifa.__proto__.__proto__ === Object.prototype);
+true,true
+
+9.What does JavaScript's prototypal inheritance do?
+   Allows objects to inherit properties and methods from their prototype
+
+10.function Galaxy(name){
+    this.name=name;
+}
+const milkyWay =new Galaxy("mily Way");
+console.log(milkyWay.__proto__.__proto__.__proto__);
+null
+Every object in JavaScript inherits from another one,forming a prototype chain.The milkyWayobject's prototype is Galaxy.prototype,whose prototype is Object.prototype.
+The top of this chain is Object.prototypw,whose prototype is null , hence the last log prints null.
+
+11.What is the prototype chain in JavaScript?
+  A hierarchy of objects where each object has a reference to its parent prototype.
+
+12.Given the following JavaScript code, what will be the output?
+   let obj ={a:1,b:2};
+   console.log(Object.getPrototypeOf(obj) === Object.prototype);
+   ans=true
+   Onject literals are created as instances of base Object constructor.Therefore,their prototype is Object.prototype.
+   The Object.getPrototypeOf() method returns the prototype of the specified object,in this case Object.prototype,hence the output will be true
+
+13.function Person(name){
+  this.name = name;
+}
+Person.prototype.age = 30;
+
+const john = new Person("john");
+john.__proto__.age=40;
+console.log(john.age);
+console.log(Person.prototype.age);
+ans=40,40
+Person.prototype.age is initially set to 30.However by accessing john.__proto__.age and setting it to 40,the value of age is modified for all instances of Person, including john.
+As a result,john.age will be 40 and Person.prototype.age will also be 40.
+
+14.What is the correct syntax to add a new property to the prototype chain of the following object in JavaScript?
+
+const myObject = {};
+Object.prototype.newProperty="value";
+Since myObject is not a constructor function and does not have a prototype property,the correct syntax is to modify the Object.prtotype directly.
+This ensures that the property will be accessible by all objects that inherit from Object.prototype.
+
+15.let arr =[1,2,3];
+    console.log(arr.constructor === Array);
+    ans=true
+    Arrays in JavaScript are instances of the Array constructor hence arr.constructor === Array will be true.
+
+16.let arr = new Array(3);
+   let result = arr.__proto__.__proto__;
+   ans = Object.prototype
+   In JavaScript the __proto__property of an object points to its prototype.
+   for an array instance,its __proto__points to Array.prototype.
+   Since Array.prototype is an object itself,its __proto__ points to Object.prototype.
+
+17.In a JavaScript game, you have a basePlayer object for common properties. You want to create a hero player object that is a prototype of basePlayer, but also has its own unique properties. How should you do this?
+   let hero = Object.create(basePlayer);
+   Object.create(proto) is used to create a new object with proto as its prototype.
+   This allows hero to inherit basePlayer properties and have its own unique ones.
+
+18. let parent ={
+      name:"parent',
+      children:[]
+};
+    let child1 =Object.create(parent);
+    child1.name="child1";
+    child1.children.push(child1.name);
+    What will be the value of parent.children[0]?
+    child1=ans
+    Although Object.create creates a new object with the specified object as its prototype,it does not deep copy the properties.
+    Therefore,the child array in parent and child1 are same and pushing an element in child1.children also affects parent.children
+
+
+

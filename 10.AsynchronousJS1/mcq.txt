@@ -1,0 +1,97 @@
+1.Which of the following is a benefit of using asynchronous functions in JavaScript?
+  They allow for parallel execution of multiple tasks,improving overall performance.
+  These functions allows the tasks to run in the background without blocking other operations ,
+  ensuring that different parts of code can execute concurrently.
+  setTimeout,FileReader and Geolocation are asynchronous in nature.
+
+2.Which of the following web APIs is not asynchronous in nature?
+  DOM API
+
+3.What happens if no delay is specified in setTimeout?
+   The callback function will execute immediately
+   0 is assumed at the delay time.
+
+4.for(var i=0;i< 5;i++){
+    setTimeout(function(){
+        cosnoloe.log(i);
+    },1000);
+}
+  for(let i=0;i< 5;i++){
+    setTimeout(function(){
+        cosnoloe.log(i);
+    },1000);
+}
+ans =5,5,5,5,5 and 0,1,2,3,4
+In the first loop where var is used which has global scope.
+The setTimeout function are scheduled to execute after the loop completes.
+By that time variable i is incremented to 5and all callbacks share the same reference to i.
+
+In the second loop with let a new block scope is created for each iteration.Each callback function captures its own lexical environment,
+preserving the respective value of i at the time of creation.
+ 
+ 5.What happens if the interval specified in setInterval is set to 0?
+   The function will be executed immediately and repeatedly without any delay.
+
+6.What data type does the setInterval function return?
+  Number
+
+7.What is the purpose of the focus() method?
+  It moves the cursor to the input element
+
+8.Which of the following methods can be used to change the value of an input field dynamically?
+  value
+
+9.Which HTTP request method is typically used to retrieve data from a server in JavaScript?
+   GET
+
+10.Which of the following statements is true about the client-server architecture?
+   The client and server components can be developed independently and communicate over a network
+
+11.How can callback functions help handle asynchronous operations in JavaScript?
+   By allowing code execution to continue without waiting for the asynchronous operation to complete.
+
+12.What does the send() method of the XMLHttpRequest object do?
+    send the HTTP request to the server.
+    It initiates the request and sends it to the specified URL using the specified HTTP method(GET,POST).
+    The send() method typically called after setting up the XMLHTTPRequest object with the necessary properties and event handlers to send the request and retrieve the server's response.
+
+13.Which event handler of the XMLHttpRequest object can be used to handle errors that occur during the request?
+   onerror()
+   The onerror is triggered when there is a network error or if the request could not be completed.
+   By definig an onerror event handler you can handle and respond to any errors that occur during the XMLHTTPRequest.
+
+14.How do you retrieve the server response as JSON using XMLHttpRequest?
+   xhr.responseType ="json"
+
+15.What is the difference between the load and loadend events in the context of XMLHttpRequest?
+    The load event occurs when the response is successfully loaded,while the loadend event occurs when the request is complete.
+    
+16.Which of the following statements best describes the execution order of callback functions in JavaScript?
+   Callbacks are executed sequentially,based on the order they are called.
+   Callbacks function in JavaScript are executed sequentially,maenaing they follow the order in which they are called or registered.
+   This ensures that the execution of the next callback occurs only after the previous one complete.
+
+17.One common use case for callbacks is event handling. Which statement is true about event handling with callbacks?
+   Multiple callbacks can be registered for the same event.
+   When handling events with callbacks , you can register multiple callbacks to be triggered when the event occurs.
+   Each callback can perform its own specific actions in response to the event,providing flexibility and modularity in event handling.
+
+18.Match the following status code with their corresponding error.
+   In HTTP ,status codes are used to indicate the outcome of a request.
+   2xx range = successfull responses. indicating that the request was processed successfully.
+   4xx range = signifies errors,indicating that there was an issue with the client's request.
+   5xx range = indicates server errors,highlighting that there was an error on the server side while processing the request.
+   3xx range = represents redirection,meaning that the requested resource has been temporarily moved or redirected.
+
+19.How does the concept of inversion of control relate to callback functions?
+   Callbacks enable inversion of control by delegating control to external functions.
+   inversion of control is a software design that emphasizez delegating control to external entities.
+   Callbacks function allow this by allowing the programmer to pass a function as an arguement to another function, enabling the external function to invoke the callback at a later time.
+
+20.How can callback hell be mitigated in JavaScript?
+   By using techniques like Promises and fetch().
+
+21.What is the disadvantage of the pyramid of doom pattern?
+   It can lead to deeply nested and hard-to-read code.
+   The excessive indentation and nesting make the code more difficult to understand,maintain and debug.
+   It can also make it challenging to handle errors and manage control flow.

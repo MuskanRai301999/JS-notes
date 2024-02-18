@@ -1,0 +1,39 @@
+1.What is JQuery?
+  A JavaScript library.
+
+2.Why do we need to use Jquery?
+  1.Accelerate speed of development
+  2.More work in less code
+  3.Provides some easy set of functions
+
+3.Which sign does jQuery use as a shortcut for jQuery?
+  '$' sign
+
+4.Jquery uses CSS selectors to select elements?
+   true
+
+5.With jQuery, look at the following selector: $("div.intro"). What does it select?
+  all the div elements with class intro
+
+6.Which of the following will hide all elements with class 'hide'?
+  $(".hide").hide()
+
+7.Which of the following will add a 'red' background color to the body?
+  $("body").css("background-color","red");
+
+8.Which method is present in JQuery that occurs after the DOM is loaded?
+  ready()
+  in Jqery the method commonly used to execute codeafter the DOM has been fully loaded is the $(document).ready() method.
+  This method ensures that the code inside it will run only when the DOM is ready.
+
+9.Which method is used to set a click event on a button?
+  $("button").click(function(){})
+
+10.Which of the following methods sets the value of the input tag?
+
+$("button").click( function() {
+    $("input:text").____________;
+});
+ The val() method in jquery is used to get or set the value of form elements, such as input, select and textarea.
+ In this case,it sets the value of the input:text element to "HeHeHe" when the button is clicked.
+ 

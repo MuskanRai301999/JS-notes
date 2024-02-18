@@ -1,0 +1,72 @@
+1.Which of the following statements best describes an API?
+  It is a collection of functions and procedures available for use by developers.
+  An API is a set of rules and protocols that allow different software apllications to communicate with each other.It provides a collection of functions ,procedures and definitions that developers
+  can use to interact with a software component,library or service.
+
+2.Different types of API
+  Web api, DOM api, Database API
+
+3.What happens if you declare a variable with the name document and try to access it like the given code snippet:
+   let document =20;
+   conosle.log(document);
+   It will give syntax error.
+   The identifier 'document' is a reserved keyword in JavaScript.When you try to declare a variable with the name "document".It conflicts with the reserved word and results in syntax error.
+
+4.Which property allows you to access the next sibling node of an element within the <body> element?
+  document.body.nextElementSibling
+
+5.What is the return type of the querySelector method in JavaScript?
+  Node
+
+6.The querySelector method returns the first element that matches the specified CSS selector. What is the return type if no match is found?
+   null
+
+7.For the following code, How can I access the parent container of the <p> tag?
+  <body>
+  <div>
+  <p>This is the child element</p>
+  </div>
+  </body>
+  const p =document.querySelector('p').parentNode
+  const p =document.querySelector('p').parentElement
+
+8.Which property is used to change the text content of an HTML element?
+   innerHTML and textContent
+
+9.What is the difference between the append and appendChild methods in DOM manipulation?
+  Append is used to append multiple elements, while appendChild is used to append single element.
+  Append is a newer method introduced in modern browsers,while appendChild is a traditional method available for a long time.
+  Append can accept text(DOMstring) as an arguement ,while appendChild only accepts DOM nodes.
+
+10.Which of the following is correct syntax for adding multiple elements in the DOM using append?
+   element.append(element1,element2,element3)
+
+11.If an element is already part of the DOM structure, what happens when you try to append it again using these methods?
+    The element is moved to the end of the parent element
+
+12.Which of the following is not a valid method for adding an element to the DOM?
+   insert()
+   There are no such methods as insert which can be used to add an element to the DOM.Whereas append is used to add an element at the end.
+   insertBefore is used to insert a node before a specific refernce node as a child of a parent NOde.
+   The inserAdjacentHTML is used to insert HTML markup at a specified position relative to  a element
+
+13.Which method is used to remove an HTML element from the DOM?
+   remove() and removeChild()
+
+  14.Which property can be used to access the coordinates of the mouse pointer relative to the viewport during the mousemove event?
+      clientX and clientY
+
+15.Scenario: You are developing a website that includes a feature where users can resize and rearrange elements on a page by dragging and dropping them. As a developer, you need to handle the dragging and dropping functionality.
+
+In the context of handling dragging and dropping elements, which event would you use to track the dragging process and update the element's position?
+ Drag event
+
+16.During event propagation, which phase occurs first
+   Capture phase
+   During event propagation,the first phase that occurs is the capture phase.In this phase,the evnt starts from the highest-level ancestor element and travels down the tree to the target element.
+
+17.What is event delegation in JavaScript?
+   The process of attaching event handlers to the parent element and handling events that occur on its child elements.
+   Event delegation is a technique in JavaScript where instead of attaching event handlers to individual child elements,you attach a single event handler to a parent element that will handle events triggered by its child elements.
+
+
