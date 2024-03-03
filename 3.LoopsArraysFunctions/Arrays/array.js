@@ -47,7 +47,8 @@ console.log(teams);
 teams.shift();
 console.log(teams);
 //(4) ['CSK<', 'RCB', 'MI', 'LSG']
-//Remove the element from the last
+//Remove the element from the first
+//return the removed element.
 
 //Check the element is present or not
 //1.indexOf()
